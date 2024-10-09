@@ -11,4 +11,4 @@ For those who don't know what a Portfolio is, this is simply a resume for profes
 > This project is currently in HTML5 and CSS3 only, JavaScript is coming later.
 
 ## What to do ?
-- [ ] #1
+- [ ] https://github.com/slouowzee/Web-Portfolio/issues/1
