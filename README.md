@@ -10,3 +10,5 @@ For those who don't know what a Portfolio is, this is simply a resume for profes
 > [!NOTE]
 > This project is currently in HTML5 and CSS3 only, JavaScript is coming later.
 
+## What to do ?
+- [ ] #1
