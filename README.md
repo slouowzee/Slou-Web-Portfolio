@@ -5,17 +5,25 @@
 > I grant the right to inspire yourself from this portfolio for your own websites / portfolio (code and structure).
 
 Welcome to my Portfolio project where you can look throught the processing of making a Portfolio website for your professional uses. 
-For those who don't know what a Portfolio is, this is simply a resume for professional mesure.
+For those who don't know what a Portfolio is, this is simply a resume of your skills for professional mesure.
 
 > [!NOTE]
 > This project is currently in HTML5 and CSS3 only, JavaScript is coming later.
 
-## Table of content : 
+## 📓 Short Presentation
+In this Portfolio, I wanted to have something corresponding to me, with my art, my work and the most important thing : my style and my liking.\
+So i choosed to import my profile picture for the header of the site, with a code color that i like for the rest of the website.\
+...
+
+## 🔖 Table of content : 
 <ul>
-  <li><a href="">Process & To-Do List</a></li>
+  <li><a href="https://github.com/slouowzee/Web-Portfolio#process--to-do-list-">Process & To-Do List</a></li>
+  <li><a>Showcase</a></li>
+  <li><a>...</a></li>
+  <li><a>...</a></li>
 </ul>
 
-## Process & To-Do List :
+## 📑 Process & To-Do List :
 <ul>
   <li>HTML Structure : </li>
   <ul>
@@ -63,3 +71,6 @@ For those who don't know what a Portfolio is, this is simply a resume for profes
     <li>Soon...</li>
   </ul>
 </ul>
+
+## 📷Quick Shocase : 
+Comming soon...
