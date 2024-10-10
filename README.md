@@ -10,6 +10,11 @@ For those who don't know what a Portfolio is, this is simply a resume for profes
 > [!NOTE]
 > This project is currently in HTML5 and CSS3 only, JavaScript is coming later.
 
+## Table of content : 
+<ul>
+  <li><a href="">Process & To-Do List</a></li>
+</ul>
+
 ## Process & To-Do List :
 <ul>
   <li>HTML Structure : </li>
