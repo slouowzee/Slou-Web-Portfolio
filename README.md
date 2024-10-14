@@ -37,6 +37,7 @@ So i choosed to import my profile picture for the header of the site, with a cod
 
   <li>Index Structure : </li>
   <ul>
+    - [x] #739
     <li>- [x] Header : Pixel art, reverse top fade away, links on the top, title in the middle of the Header</li>
     <li>- [ ] Container : Quick presentation, very short, color inherited from the pixel art Header</li>
     <li>- [x] Footer : Same color from the Container but darker</li>
