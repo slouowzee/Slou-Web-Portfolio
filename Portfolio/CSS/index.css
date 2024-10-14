@@ -1,0 +1,126 @@
+html {
+	height: 100%;
+	box-sizing: border-box;
+    }
+    
+    *,
+    *:before,
+    *:after {
+	box-sizing: inherit;
+    }
+    
+    body {
+	margin: 0;
+	font-family: 'Belleza', sans-serif; /* Ajout d'une police de secours */
+	background-color: rgba(245, 11, 140, 0.767);
+	position: relative;
+    }
+    
+    .header {
+	position: relative;
+	height: 500px;
+	background: url('../Images/SLou.jpeg') center / cover no-repeat;
+	z-index: 1; /* Ajout d'un z-index pour la header */
+    }
+    
+    .navbar {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	z-index: 10;
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+    }
+    
+    .navbar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+    }
+    
+    .navbar li {
+	padding: 10px;
+    }
+    
+    .navbar a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.5s; /* Ajout d'une transition pour l'effet hover */
+    }
+    
+    .navbar a:hover {
+	color: rgb(178, 178, 190);
+    }
+    
+    .title {
+	display: flex;
+	flex-direction: column; /* Aligne les éléments en colonne */
+	justify-content: center; /* Centre verticalement */
+	align-items: center; /* Centre horizontalement */
+	height: 100%; /* Assure que l'élément prend toute la hauteur disponible */
+	color: white; /* Change la couleur du texte si nécessaire */
+	position: relative; /* Ajoute position relative pour z-index */
+	z-index: 2; /* Assure que le texte est au-dessus du dégradé */
+    }
+    
+    .title h1 {
+	text-align: center; /* Centre le texte à l'intérieur de l'élément h1 */
+	margin: 0; /* Supprime le margin par défaut */
+    }
+    
+    .title p {
+	text-align: center; /* Centre le texte du paragraphe */
+	margin: 0; /* Supprime le margin par défaut */
+    }
+    
+    .header::after,
+    body::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 0; /* Assure que le dégradé est en dessous */
+    }
+    
+    .header::after {
+	top: 0;
+	bottom: 0;
+	background: linear-gradient(to bottom, rgba(140, 57, 161, 0), rgba(111, 31, 131, 1));
+    }
+    
+    body::after {
+	top: 500px;
+	bottom: 0;
+	background: linear-gradient(to bottom, rgb(111, 31, 131), rgba(143, 7, 255, 0.767));
+	z-index: -1; /* Assure que le fond est derrière tout */
+    }
+    
+    footer {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	text-align: center;
+	padding: 20px;
+	position: relative; /* Permet d'utiliser z-index */
+	z-index: 10; /* Assure que le footer est au-dessus */
+    }
+    
+    .social-icons {
+	margin-bottom: 10px;
+    }
+    
+    .social-icons a {
+	color: white;
+	margin: 0 15px; /* Espace entre les icônes */
+	font-size: 30px; /* Agrandit la taille des icônes */
+	transition: transform 0.3s; /* Ajoute une transition pour l'effet au survol */
+	display: inline-block; /* Assure que les icônes sont en ligne et cliquables */
+	cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+    }
+    
+    .social-icons a:hover {
+	transform: scale(1.2); /* Agrandit les icônes au survol */
+    }
+    
