@@ -27,19 +27,19 @@ So i choosed to import my profile picture for the header of the site, with a cod
 <ul>
   <li>HTML Structure : </li>
   <ul>
-    <li>- [ ] Head : Website Title | Fonts</li>
-    <li>- [ ] Header : Skill | About Me & Career | Contact</li>
+    <li>- [X] Head : Website Title | Fonts</li>
+    <li>- [X] Header : Skill | About Me & Career | Contact</li>
     <li>- [ ] Container : Images | Self Presentation</li>
-    <li>- [ ] Footer : Social Medias | Copyright | Legal</li>
+    <li>- [X] Footer : Social Medias | Copyright</li>
   </ul>
 
   <br>
 
   <li>Index Structure : </li>
   <ul>
-    <li>- [ ] Header : Pixel art, reverse top fade away, links to the right, title in the middle of the Header</li>
+    <li>- [X] Header : Pixel art, reverse top fade away, links on the top, title in the middle of the Header</li>
     <li>- [ ] Container : Quick presentation, very short, color inherited from the pixel art Header</li>
-    <li>- [ ] Footer : Same color from the Container but darker</li>
+    <li>- [X] Footer : Same color from the Container but darker</li>
     <li>- [ ] Text : White ?</li>
   </ul>
   
