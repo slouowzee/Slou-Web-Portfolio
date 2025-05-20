@@ -1,0 +1,122 @@
+/* Loader Terminal Style */
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader__terminal {
+    width: 90%;
+    max-width: 700px;
+    background-color: var(--terminal-bg);
+    border-radius: 8px;
+    border: 1px solid var(--terminal-border);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
+                0 0 20px var(--terminal-glow);
+}
+
+.loader__header {
+    display: flex;
+    align-items: center;
+    background-color: rgba(40, 30, 30, 0.6);
+    padding: var(--space-xs) var(--space-sm);
+    border-bottom: 1px solid var(--terminal-border);
+}
+
+.loader__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.loader__dot--red {
+    background-color: var(--mac-close);
+}
+
+.loader__dot--yellow {
+    background-color: var(--mac-minimize);
+}
+
+.loader__dot--green {
+    background-color: var(--mac-maximize);
+}
+
+.loader__title {
+    margin-left: var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--terminal-text);
+    opacity: 0.7;
+}
+
+.loader__content {
+    padding: var(--space-md);
+    font-family: var(--font-mono);
+    color: var(--terminal-text);
+    font-size: 0.9rem;
+}
+
+.loader__message {
+    margin-bottom: var(--space-sm);
+    line-height: 1.5;
+    display: flex;
+}
+
+.loader__prompt {
+    color: var(--color-primary-light);
+    margin-right: var(--space-xs);
+}
+
+.loader__message--success {
+    color: var(--terminal-success);
+}
+
+.loader__message--error {
+    color: var(--terminal-error);
+}
+
+.loader__cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: var(--terminal-text);
+    animation: blink 1s infinite;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+.loader__progress {
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin-top: var(--space-md);
+    overflow: hidden;
+}
+
+.loader__progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: var(--color-primary);
+    transition: width 0.2s ease-out;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

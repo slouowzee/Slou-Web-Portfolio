@@ -1,0 +1,27 @@
+/**
+ * main.css - Point d'entrée principal pour tous les styles CSS
+ * Ce fichier importe tous les autres fichiers CSS dans un ordre spécifique
+ */
+
+/* Base - Fondation du site */
+@import 'base/reset.css';         /* Reset des styles par défaut */
+@import 'base/variables.css';     /* Variables CSS (couleurs, espacements, etc.) */
+@import 'base/styles.css';        /* Styles de base et classes utilitaires */
+@import 'base/animations.css';    /* Animations génériques */
+@import 'base/transitions.css';   /* Transitions et effets d'animation */
+@import 'base/theme.css';         /* Thèmes clair/sombre */
+@import 'base/responsive.css';    /* Styles de réactivité globaux */
+@import 'base/accessibility.css'; /* Styles d'accessibilité */
+
+/* Layout - Disposition globale */
+@import 'layout/base-layout.css'; /* Structure de base de la page */
+@import 'layout/scroll.css';      /* Comportements de défilement */
+
+/* Components - Éléments réutilisables */
+@import 'components/navbar.css';     /* Barre de navigation */
+@import 'components/hero.css';           /* Section hero */
+@import 'components/loader.css';         /* Loader de démarrage */
+@import 'components/terminal-effects.css'; /* Effets de terminal */
+@import 'components/about-update.css';   /* Section à propos */
+@import 'components/about-animations.css'; /* Animations pour la section à propos */
+@import 'components/interactivity.css';  /* Styles pour les éléments interactifs */
