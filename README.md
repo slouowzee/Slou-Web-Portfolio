@@ -1,4 +1,4 @@
-# 📂 Slou's Portfolio
+# 📂 Slouowze's Portfolio
 
 > [!WARNING]
 > You are not authorized to copy this project nor to modify it for your personnal uses.
