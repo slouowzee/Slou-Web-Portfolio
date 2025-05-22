@@ -12,26 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fonction pour gérer l'affichage/masquage de la navbar pendant le défilement
     function handleNavbarScrolling() {
         const currentScrollPosition = window.scrollY;
-        const mobileMenuOpen = document.querySelector('.navbar__list').classList.contains('active');
         
-        // Ne pas cacher la navbar si le menu mobile est ouvert
-        if (mobileMenuOpen) {
-            navbar.classList.remove('navbar-hidden');
-            navbar.classList.add('navbar-scrolled');
+        // Ajouter une classe si on défile vers le bas et qu'on n'est pas tout en haut
+        if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 100) {
+            navbar.classList.add('navbar-hidden');
         } else {
-            // Comportement normal de défilement
-            // Ajouter une classe si on défile vers le bas et qu'on n'est pas tout en haut
-            if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 100) {
-                navbar.classList.add('navbar-hidden');
+            navbar.classList.remove('navbar-hidden');
+            
+            // Ajouter une classe quand on n'est pas en haut de page
+            if (currentScrollPosition > 20) {
+                navbar.classList.add('navbar-scrolled');
             } else {
-                navbar.classList.remove('navbar-hidden');
-                
-                // Ajouter une classe quand on n'est pas en haut de page
-                if (currentScrollPosition > 20) {
-                    navbar.classList.add('navbar-scrolled');
-                } else {
-                    navbar.classList.remove('navbar-scrolled');
-                }
+                navbar.classList.remove('navbar-scrolled');
             }
         }
         

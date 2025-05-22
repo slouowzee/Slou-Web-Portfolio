@@ -76,41 +76,13 @@ body.light-theme h3 {
 
 /* Transitions douces entre les thèmes */
 body {
-  transition: background-color 0.7s cubic-bezier(0.22, 1, 0.36, 1), 
-              color 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: background-color 0.7s ease, color 0.7s ease;
   scroll-behavior: smooth; /* Pour un défilement plus fluide */
 }
 
 * {
-  transition: background-color 0.5s cubic-bezier(0.22, 1, 0.36, 1), 
-              border-color 0.5s cubic-bezier(0.22, 1, 0.36, 1), 
-              box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
-              filter 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/* Animation avancée pour le changement de thème */
-body:after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-body.theme-transition:after {
-  opacity: 0.1;
-  animation: theme-transition-flash 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-@keyframes theme-transition-flash {
-  0% { opacity: 0; }
-  50% { opacity: 0.15; }
-  100% { opacity: 0; }
+  transition: background-color 0.5s ease-in-out, 
+              border-color 0.5s ease-in-out, 
+              box-shadow 0.5s ease-in-out,
+              transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }

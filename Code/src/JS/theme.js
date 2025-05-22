@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Liaison avec le fichier d'animations.js
     function loadAnimationsScript() {
         const script = document.createElement('script');
-        script.src = 'JS/animations/page-animations.js';
+        script.src = 'JS/animations.js';
         script.defer = true;
         document.head.appendChild(script);
     }
@@ -99,9 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
         themeSwitch.addEventListener('click', function() {
             const isCurrentlyDark = !document.body.classList.contains('light-theme');
             
-            // Ajouter la classe de transition pour l'animation flash
-            document.body.classList.add('theme-transition');
-            
             // Créer l'effet de transition
             createRippleEffect(!isCurrentlyDark);
             
@@ -116,17 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     localStorage.setItem('theme', 'dark');
                     if (themeIcon) themeIcon.classList.replace('fa-sun', 'fa-moon');
                 }
-                
-                // Déclencher un événement pour notifier les autres scripts du changement de thème
-                const themeEvent = new CustomEvent('themeChanged', {
-                    detail: { isDarkTheme: !document.body.classList.contains('light-theme') }
-                });
-                document.dispatchEvent(themeEvent);
-                
-                // Retirer la classe de transition après l'animation
-                setTimeout(() => {
-                    document.body.classList.remove('theme-transition');
-                }, 500);
             }, 50);
         });
     }

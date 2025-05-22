@@ -1,79 +1,61 @@
 /**
  * Menu.js - Gestion du menu mobile et navbar fixed
  * Ce script gère l'ouverture/fermeture du menu sur mobile et le comportement de la navbar au défilement
- * Version complètement revue pour une meilleure expérience utilisateur
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Éléments du DOM
     const hamburger = document.querySelector('.navbar-hamburger');
-    const navCenter = document.querySelector('.navbar__center');
     const navList = document.querySelector('.navbar__list');
     const navbar = document.querySelector('.navbar');
     const closeButton = document.getElementById('mac-close');
     const minimizeButton = document.getElementById('mac-minimize');
     const maximizeButton = document.getElementById('mac-maximize');
-    const navLinks = document.querySelectorAll('.navbar__list a');
+    let lastScrollTop = 0;
     
-    // Variables d'état
-    let isMinimized = false;
-    let isFullScreen = false;
-    
-    // Fonction pour fermer le menu mobile quand on redimensionne vers desktop
-    function handleResize() {
-        if (window.innerWidth > 768) {
-            // Fermer le menu si ouvert et l'écran est redimensionné en desktop
-            navCenter.classList.remove('active');
-            hamburger.classList.remove('active');
-        }
-    }
-    
-    // Surveiller le redimensionnement pour fermer le menu si nécessaire
-    window.addEventListener('resize', handleResize);
-    
-    // Fonction pour gérer le scroll du body (empêcher le scroll quand le menu mobile est ouvert)
-    function toggleBodyScroll(disable) {
-        if (disable) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
-    }
-    
-    // Fonction pour fermer le menu mobile
-    function closeMenu() {
-        navCenter.classList.remove('active');
-        hamburger.classList.remove('active');
-        toggleBodyScroll(false);
-    }
-    
-    // Gestion du menu hamburger
-    if (hamburger && navCenter) {
-        hamburger.addEventListener('click', function(e) {
-            e.stopPropagation();
-            navCenter.classList.toggle('active');
-            hamburger.classList.toggle('active');
-            toggleBodyScroll(navCenter.classList.contains('active'));
+    // Gestion du hamburger menu
+    if (hamburger && navList) {
+        hamburger.addEventListener('click', function() {
+            navList.classList.toggle('active');
+            
+            // Animation des barres du hamburger
+            const spans = hamburger.querySelectorAll('span');
+            spans.forEach(span => span.classList.toggle('active'));
         });
         
         // Fermer le menu quand on clique sur un lien
+        const navLinks = navList.querySelectorAll('a');
         navLinks.forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-        
-        // Fermer le menu quand on clique ailleurs sur la page
-        document.addEventListener('click', function(e) {
-            if (navCenter.classList.contains('active') && 
-                !navCenter.contains(e.target) && 
-                e.target !== hamburger && 
-                !hamburger.contains(e.target)) {
-                closeMenu();
-            }
+            link.addEventListener('click', function() {
+                navList.classList.remove('active');
+                const spans = hamburger.querySelectorAll('span');
+                spans.forEach(span => span.classList.remove('active'));
+            });
         });
     }
     
-    // Le comportement de la navbar au scroll est maintenant géré dans scroll-animations.js
-    // Ce code a été commenté pour éviter les conflits
+    // Navbar qui se cache/apparaît au scroll
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Si on est tout en haut, toujours montrer la navbar
+            if (scrollTop <= 10) {
+                navbar.style.transform = 'translateY(0)';
+                return;
+            }
+            
+            // Cache la navbar en scrollant vers le bas, la montre en scrollant vers le haut
+            if (scrollTop > lastScrollTop) {
+                // Scroll vers le bas
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                // Scroll vers le haut
+                navbar.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+    }
     
     // Gestion des boutons mac
     if (closeButton) {

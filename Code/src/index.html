@@ -1,48 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
+		<link rel="preload" href="CSS/scroll.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+		<link rel="preload" href="CSS/about-update.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+		<link rel="preload" href="CSS/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+		<link rel="preload" href="CSS/terminal-effects.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+		<noscript>
+			<link rel="stylesheet" href="CSS/reset.css">
+			<link rel="stylesheet" href="CSS/styles.css">
+			<link rel="stylesheet" href="CSS/theme.css">
+			<link rel="stylesheet" href="CSS/animations.css">
+			<link rel="stylesheet" href="CSS/scroll.css">
+			<link rel="stylesheet" href="CSS/about-update.css">
+			<link rel="stylesheet" href="CSS/terminal-effects.css">
+		</noscript>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		
-		<title>Slouowze's Portfolio</title>
+		<title>Pilet "Slouowze" Gaël - Portfolio - Développeur Front-End</title>
 		<meta name="description" content="Portfolio de Pilet Gaël, développeur front-end. Découvrez mes projets et prennez contacte avec moi pour parler du votre !">
 		<meta name="author" content="Pilet Gaël">
 		<meta name="theme-color" content="#6f4e37">
 		
 		<!-- Favicon -->
 		<link rel="icon" href="#" type="#">
-		
-		<!-- Open Graph -->
-		<meta property="og:title" content="Slouowze's Portfolio">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://portfolio.slouowze.fr">
-		<meta property="og:description" content="Hey, je suis Pilet Gaël, développeur front-end. Découvrez mes projets et prennez contacte avec moi pour parler du votre !">
-		<meta property="og:image" content="#.jpg">
-		
-		<!-- Préchargement des polices et icônes -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-		
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-		
+
 		<!--Font Awesome-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 		
-		<!-- CSS principal -->
-		<link rel="stylesheet" href="CSS/main.css">
+		<!-- Open Graph -->
+		<meta property="og:title" content="Pilet Gaël - Portfolio">
+		<meta property="og:description" content="Hey, je suis Pilet Gaël, développeur front-end. Découvrez mes projets et prennez contacte avec moi pour parler du votre !">
+		<meta property="og:image" content="#.jpg">
 		
-		<!-- Fallback pour NoScript -->
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">				<!-- CSS -->
+		<link rel="preload" href="CSS/reset.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+		<link rel="preload" href="CSS/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+		<link rel="preload" href="CSS/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
 		<noscript>
-			<link rel="stylesheet" href="CSS/main.css">
+			<link rel="stylesheet" href="CSS/reset.css">
+			<link rel="stylesheet" href="CSS/styles.css">
+			<link rel="stylesheet" href="CSS/theme.css">
+			<link rel="stylesheet" href="CSS/animations.css">
+			<link rel="stylesheet" href="CSS/scroll.css">
 		</noscript>
+		<link rel="preload" href="CSS/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+		<link rel="preload" href="CSS/scroll.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
 		
-		<!-- Librairies externes -->
+		<!-- CSS Animation pour les transitions de langue -->
+		<style>
+			.lang-switch-animation {
+				animation: pulse 0.5s ease;
+			}
+			@keyframes pulse {
+				0% { transform: scale(1); }
+				50% { transform: scale(1.2); }
+				100% { transform: scale(1); }
+			}
+            
+            /* Animations pour les transitions de thème */
+            .theme-transition {
+                transition: all 0.8s ease-in-out;
+            }
+            
+            .animate-fade {
+                animation: fadeInOut 0.5s ease;
+            }
+            
+            .animate-scale {
+                animation: scaleUpDown 0.5s ease;
+            }
+            
+            .animate-opacity {
+                animation: changeOpacity 0.6s ease;
+            }
+            
+            @keyframes fadeInOut {
+                0% { opacity: 0.5; transform: translateY(-5px); }
+                50% { opacity: 1; transform: translateY(0); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
+            
+            @keyframes scaleUpDown {
+                0% { transform: scale(0.95); }
+                50% { transform: scale(1.03); }
+                100% { transform: scale(1); }
+            }
+            
+            @keyframes changeOpacity {
+                0% { opacity: 0.7; }
+                100% { opacity: 1; }
+            }
+		</style>
+		
+		<!-- JavaScript -->
+		<script defer src="JS/loader.js"></script>
+		<script defer src="JS/typing.js"></script>
+		<script defer src="JS/load.js"></script>
+		<script defer src="JS/theme.js"></script>
+		<script defer src="JS/copyright.js"></script>
+		<script defer src="JS/form.js"></script>
+		<script defer src="JS/menu.js"></script>
+		<script defer src="JS/language.js"></script>
+		<script defer src="JS/scroll.js"></script>
+		<script src="https://unpkg.com/htmx.org@1.8.4"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-		
-		<!-- Script principal - Inclut tous les autres scripts par la fonction import -->
-		<script type="module" src="JS/main.js"></script>
 	</head>
 
 	<body>
@@ -58,7 +123,7 @@
 				<div class="loader__content">
 					<div class="loader__message">
 						<span class="loader__prompt">$</span>
-						<span class="loader__text">cd ~/Slouowze/Portfolio</span>
+						<span class="loader__text">cd ~/SLouowze/Portfolio</span>
 					</div>
 					<div class="loader__message">
 						<span class="loader__prompt">$</span>
@@ -89,39 +154,31 @@
 		<main class="container">
 			<header id="header" class="header">
 				<nav class="navbar">
-					<div class="navbar__left">
-						<div class="mac-buttons">
-							<div class="mac-button mac-close" id="mac-close" title="Fermer"></div>
-							<div class="mac-button mac-minimize" id="mac-minimize" title="Réduire"></div>
-							<div class="mac-button mac-maximize" id="mac-maximize" title="Agrandir"></div>
-						</div>
-						<div class="window-title">~/SLouowze/Portfolio</div>
+					<div class="mac-buttons">
+						<div class="mac-button mac-close" id="mac-close" title="Fermer"></div>
+						<div class="mac-button mac-minimize" id="mac-minimize" title="Réduire"></div>
+						<div class="mac-button mac-maximize" id="mac-maximize" title="Agrandir"></div>
 					</div>
-					
-					<div class="navbar__center">
-						<ul class="navbar__list">
-							<li><a href="#about" data-i18n="nav_about">À propos</a></li>
-							<li><a href="#techs" data-i18n="nav_techs">Technologies</a></li>
-							<li><a href="#services" data-i18n="nav_services">Services</a></li>
-							<li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
-							<li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-						</ul>
+					<div class="window-title">~/SLouowze/Portfolio</div>
+					<div class="navbar-hamburger">
+						<span></span>
+						<span></span>
+						<span></span>
 					</div>
-					
-					<div class="navbar__right">
-						<div class="navbar-utils">
-							<button class="theme-switcher" aria-label="Changer de thème">
-								<i class="fa-solid fa-moon"></i>
-							</button>
-							<button class="language-switcher" aria-label="Changer de langue">
-								<i class="fa-solid fa-language"></i>
-								<span>FR</span>
-							</button>
-						</div>
-						<button class="navbar-hamburger" aria-label="Menu mobile">
-							<span></span>
-							<span></span>
-							<span></span>
+					<ul class="navbar__list">
+						<li><a href="#about" data-i18n="nav_about">À propos</a></li>
+						<li><a href="#techs" data-i18n="nav_techs">Technologies</a></li>
+						<li><a href="#services" data-i18n="nav_services">Services</a></li>
+						<li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
+						<li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+					</ul>
+					<div class="navbar-utils">
+						<button class="theme-switcher" aria-label="Changer de thème">
+							<i class="fa-solid fa-moon"></i>
+						</button>
+						<button class="language-switcher" aria-label="Changer de langue">
+							<i class="fa-solid fa-language"></i>
+							<span>FR</span>
 						</button>
 					</div>
 				</nav>
@@ -139,6 +196,7 @@
 						<img src="#" alt="Photo de profil de Pilet Gaël" class="hero__image__photo">
 					</div>
 				</div>
+				<script src="JS/typing.js"></script>
 			</header>
 
 			<section id="about" class="about">
@@ -448,6 +506,7 @@
 						</form>
 					</div>
 				</div>
+				<script src="JS/form.js"></script>
 			</section>
 			<section class="separator">
 				<hr>
@@ -469,10 +528,10 @@
 						<a href="https://www.youtube.com/@aevn.slouowze" target="_blank" aria-label="YouTube">
 							<i class="fa-brands fa-youtube"></i>
 						</a>
-						<a href="https://www.instagram.com/el_slou/" target="_blank" aria-label="Instagram">
+						<a href="https://www.instagram.com/gael_shuna/" target="_blank" aria-label="Instagram">
 							<i class="fa-brands fa-instagram"></i>
 						</a>
-						<a href="https://github.com/slouowzee" target="_blank" aria-label="GitHub">
+						<a href="https://github.com/slouowze" target="_blank" aria-label="GitHub">
 							<i class="fa-brands fa-github"></i>
 						</a>
 					</div>
